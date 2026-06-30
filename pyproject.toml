@@ -1,0 +1,115 @@
+[build-system]
+requires = [
+    "setuptools>=69",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "sportsbook-engine"
+version = "0.1.0"
+
+description = "Quantitative sports betting research platform."
+
+readme = "README.md"
+
+requires-python = ">=3.11"
+
+authors = [
+    { name = "John Washington" },
+]
+
+dependencies = [
+    "pydantic>=2.11",
+    "pydantic-settings>=2.10",
+    "python-dotenv>=1.1",
+]
+
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.4",
+    "ruff>=0.12",
+    "black>=25.1",
+    "mypy>=1.17",
+]
+
+
+[tool.setuptools]
+include-package-data = true
+
+
+[tool.setuptools.packages.find]
+include = [
+    "sportsbook*",
+]
+
+
+[tool.pytest.ini_options]
+
+testpaths = [
+    "tests",
+]
+
+python_files = [
+    "test_*.py",
+]
+
+python_classes = [
+    "Test*",
+]
+
+python_functions = [
+    "test_*",
+]
+
+addopts = [
+    "-ra",
+]
+
+filterwarnings = [
+    "error",
+]
+
+
+[tool.ruff]
+
+target-version = "py311"
+
+line-length = 88
+
+indent-width = 4
+
+
+[tool.ruff.lint]
+
+select = [
+    "E",  # pycodestyle
+    "F",  # pyflakes
+    "I",  # isort
+    "B",  # bugbear
+    "UP", # pyupgrade
+]
+
+
+[tool.black]
+
+line-length = 88
+
+target-version = [
+    "py311",
+]
+
+
+[tool.mypy]
+
+python_version = "3.11"
+
+strict = false
+
+warn_unused_configs = true
+
+warn_return_any = true
+
+warn_unused_ignores = true
