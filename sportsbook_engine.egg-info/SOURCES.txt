@@ -1,8 +1,0 @@
-pyproject.toml
-sportsbook/common/config.py
-sportsbook_engine.egg-info/PKG-INFO
-sportsbook_engine.egg-info/SOURCES.txt
-sportsbook_engine.egg-info/dependency_links.txt
-sportsbook_engine.egg-info/requires.txt
-sportsbook_engine.egg-info/top_level.txt
-tests/test_config.py
